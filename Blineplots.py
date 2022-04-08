@@ -4,8 +4,8 @@ The code below generates a certain line plot.
 import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(0, 2, 10)
-#x = np.arange(0, 3, .1)
+x = np.linspace(0, 2, 100)
+x = np.arange(0, 3, .05)
 
 plt.plot(x, x**2, '^g', label='quadratic')
 # add new plot here
@@ -14,12 +14,13 @@ plt.xlabel('x label')
 plt.ylabel('y label')
 plt.title("Line Plots")
 plt.legend()
-plt.show()
 
 """
 1. Add two more plots to the same graph using plt.plot(). One should be a linear graph (y=x), and the other should be a cubic graph (y=x^3). You can adjust the labels as necessary.
 """
-
+plt.plot(x, x, '^r', label = 'linear')
+plt.plot(x, x**3, '^b', label = 'cubic')
+plt.show()
 """
 2. x is a set of number numbers determined by the linspace function from numpy. Adjust the third argument in the linspace function to 100. What does that control?
 
